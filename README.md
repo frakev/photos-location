@@ -1,5 +1,5 @@
 # photos-location
-Call Google Places API for retrieve locations using Exif and a directory to search for photos.
+Call Google Places API for retrieve location using Exif and a directory to search for photos.
 
 ## CREATE YOUR API KEY
 

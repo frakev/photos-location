@@ -21,7 +21,6 @@ var (
 	apiKey = flag.String("key", "", "Your Google API Key")
 	directory = flag.String("directory", "/", "Directory to search")
 	logger = stdlog.GetFromFlags()
-	//apiKey = "AIzaSyCvJzn-zdOK_k9rP3CP1oejaV1HnPWWu3g"
 )
 
 type GoogleMapsResp struct {
@@ -145,8 +144,8 @@ func getExif(fname string) error {
 func getLocation(lat float64, long float64) {
 
 	client := &http.Client{}
-	request := fmt.Sprintf("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=%g,%g&radius=500&key=%s", lat, long, apiKey)
-
+	request := fmt.Sprintf("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=%g,%g&radius=500&key=%s", lat, long, *apiKey)
+	logger.Debug(request)
 	req, err := http.NewRequest("GET", request, nil)
 	if err != nil {
 		logger.Error(err)

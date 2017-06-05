@@ -21,7 +21,6 @@ var (
 	apiKey = flag.String("key", "", "Your Google API Key")
 	directory = flag.String("directory", "/", "Directory to search")
 	logger = stdlog.GetFromFlags()
-	//apiKey = "AIzaSyCvJzn-zdOK_k9rP3CP1oejaV1HnPWWu3g"
 )
 
 type GoogleMapsResp struct {
